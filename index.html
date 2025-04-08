@@ -6,23 +6,37 @@
   <meta name="google-site-verification" content="3b72sI17LNBsVj1Oh8NG-BzM_FyQ04iBjRGvZESGCPM" />
   <meta name="description" content="Kalkulator IPK lucu dan gemoy untuk membantu kamu menghitung IPK secara mudah dan menyenangkan di ToolsKamu.my.id.">
   <meta name="keywords" content="kalkulator IPK, IPK online, hitung IPK, tools IPK lucu, ToolsKamu.my.id, IPK gemoy">
-  <link rel="canonical" href="https://www.toolsKamu.my.id" />
-  <title>Kalkulator IPK Lucu 🐣</title>
+  <link rel="canonical" href="https://www.toolsKamu.my.id/" />
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tools Kamu">
+  <title>Kalkulator IPK Lucu & Gemoy 🎀 | Tools Kamu</title>
+  <link rel="icon" type="image/png" href="logo2.png">
+
+  <!-- Open Graph Meta -->
   <meta property="og:title" content="Kalkulator IPK Lucu - Tools Kamu" />
   <meta property="og:description" content="Tools lucu buat hitung IPK kamu, dengan animasi dan tampilan yang gemoy!" />
-  <meta property="og:url" content="https://www.toolsKamu.my.id" />
+  <meta property="og:url" content="https://www.toolsKamu.my.id/" />
   <meta property="og:image" content="https://www.toolsKamu.my.id/logo2.png" />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="logo2.png">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- Confetti Script -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.toolsKamu.my.id/sitemap.xml">
+
+
+  <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Tools Kamu",
-      "url": "https://www.toolsKamu.my.id",
+      "url": "https://www.toolsKamu.my.id/",
       "description": "Kalkulator IPK lucu dan gemoy untuk bantu hitung IPK kamu dengan tampilan yang menyenangkan.",
       "publisher": {
         "@type": "Organization",
@@ -33,7 +47,10 @@
         }
       }
     }
-    </script>
+  </script>
+
+  <title>Kalkulator IPK Lucu 🐣</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -245,9 +262,7 @@ body::after {
 <body>
   <div class="container">
     <h1>🎓 Kalkulator IPK Imut 🐣</h1>
-
     <div id="courses"></div>
-
     <button onclick="addCourse()">+ Tambah Mata Kuliah 🧠</button>
 
     <div class="form-group">
@@ -264,11 +279,9 @@ body::after {
   </div>
 
   <div id="flower-container"></div>
-
   <audio id="soundPop" src="plop.mp3"></audio>
 
   <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" class="maskot" alt="Maskot Gemoy" />
-
   <div class="chat-bubble" id="chatBubble">Haii kamu gemes! 💖</div>
 
   <script>
@@ -308,7 +321,6 @@ body::after {
       `;
       container.appendChild(div);
 
-      // Bunga mekar 🌸
       const flower = document.createElement('div');
       flower.classList.add('flower');
       flower.textContent = flowerEmoji[Math.floor(Math.random() * flowerEmoji.length)];
@@ -346,12 +358,11 @@ body::after {
         🌈 IPK Keseluruhan: ${ipk.toFixed(2)}
       `;
 
-      // Confetti! 🎉
-    //   confetti({
-    //     particleCount: 100,
-    //     spread: 100,
-    //     origin: { y: 0.6 }
-    //   });
+      confetti({
+        particleCount: 100,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
     }
 
     function updateChat() {
@@ -362,8 +373,8 @@ body::after {
       void bubble.offsetWidth;
       bubble.classList.add("popIn");
     }
-    setInterval(updateChat, 5000);
 
+    setInterval(updateChat, 5000);
     addCourse();
     document.addEventListener('input', calculate);
   </script>
